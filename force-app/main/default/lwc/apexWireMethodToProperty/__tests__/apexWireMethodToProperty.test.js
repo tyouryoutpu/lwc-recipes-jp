@@ -1,11 +1,13 @@
 import { createElement } from 'lwc';
 import ApexWireMethodToProperty from 'c/apexWireMethodToProperty';
-import { registerLdsTestWireAdapter } from '@salesforce/wire-service-jest-util';
+import { registerTestWireAdapter } from '@salesforce/wire-service-jest-util';
 import getContactList from '@salesforce/apex/ContactController.getContactList';
+
+jest.mock('@salesforce/apex/ContactController.getContactList');
 
 const mockContacts = require('./data/contacts.json');
 
-const getContactListAdapter = registerLdsTestWireAdapter(getContactList);
+const getContactListAdapter = registerTestWireAdapter(getContactList);
 
 describe('c-apex-wire-method-to-property', () => {
     beforeEach(() => {
