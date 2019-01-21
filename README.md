@@ -1,97 +1,102 @@
-# Lightning Web Components Recipes
+# Lightning Web Components レシピ
 
-[![CircleCI](https://circleci.com/gh/trailheadapps/lwc-recipes.svg?style=svg)](https://circleci.com/gh/trailheadapps/lwc-recipes)
+[![CircleCI](https://circleci.com/gh/trailheadapps-jp/lwc-recipes-jp.svg?style=svg)](https://circleci.com/gh/trailheadapps-jp/lwc-recipes-jp)
+
+## This is Localized Repository. Original is here.
+https://github.com/trailheadapps/lwc-recipes
 
 ![recipes-logo](recipes-logo.png)
 
-A collection of easy-to-digest code examples for Lightning Web Components. Each recipe demonstrates how to code a specific task in 30 lines of code or less. A View Source link takes you right to the code in GitHub. From Hello World to data access and third-party libraries, there is a recipe for that!
+Lightning Web Componentsの簡単なコードサンプル集を提供します。 それぞれのレシピは特定のタスクについて30行弱程度のコードで構築されています。ソースの表示リンクでGithubのコードを参照できます。Hello Worldからサードパーティのライブラリやデータアクセスまで、豊富なレシピがあります！
 
-## Installation Instructions
+## インストール手順
 
-There are two ways to install Lightning Web Components Recipes:
+Lightning Web Components レシピには2種類のインストール方法があります。:
 
-- [Using Salesforce DX](#installing-recipes-using-salesforce-dx): This is the recommended installation option. Use this option if you are a developer who wants to experience the app and the code.
-- [Using an Unlocked Package](#installing-recipes-using-an-unlocked-package): This option allows anybody to experience the sample app without installing a local development environment.
+- [Salesforce DXを利用](#salesforce-dxを使ったレシピのインストール): 推奨する手順です。開発者でアプリとコードを詳しく知りたい方はこちらを利用してください。
+- [ロック解除済みパッケージを利用](#ロック解除済みパッケージを使ったレシピのインストール): このオプションはローカルの開発環境のインストール無しに誰でもサンプルアプリを試すことができます。
 
-## Installing Recipes using Salesforce DX
+## Salesforce DXを使ったレシピのインストール
 
-> **IMPORTANT**: Because of a current issue in pre-release, make sure your project path doesn't include any of the following folder names: **lwc**, **aura**, **wave**. For example, DO NOT clone this repository in a folder called **/Projects/lwc**.
+> **重要**: 現在はプレリリースのため、以下の様なフォルダ名をがプロジェクトのパスに含まれていないことを確認して下さい: **lwc**, **aura**, **wave**。例えば、このリポジトリを **/Projects/lwc** の様な名称のフォルダにcloneしないで下さい。
 
-1. Set up your environment. Follow the steps in the [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead project. The steps include:
+1. 環境をセットアップします。 [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead プロジェクトのステップに従います。このステップには以下が含まれます:
 
-  - Sign up for a Spring '19 pre-release org and enable Dev Hub
-  - Install the pre-release version of the Salesforce CLI
-  - Install Visual Studio Code
-  - Install the Visual Studio Code Salesforce extensions, including the Lightning Web Components extension
+  - Spring '19 プレリリースにサインアップし、Dev Hubを有効化する
+  - プレリリースバージョンの Salesforce CLI のインストール
+  - Visual Studio Codeのインストール
+  - ightning Web Components extensionを含む、Visual Studio Code Salesforce extensionsのインストール
 
-2. If you haven't already done so, authenticate with your Spring '19 hub org and provide it with an alias (spring19hub):
+2. まだ実施していない場合にはSpring '19 Hub組織に認証し、エイリアスを設定します(spring19hub):
 
   ```
   sfdx force:auth:web:login -d -a spring19hub
   ```
 
-3. Clone the lwc-recipes repository:
+3. lwc-recipes-jp リポジトリをCloneします:
 
   ```
-  git clone https://github.com/trailheadapps/lwc-recipes
-   cd lwc-recipes
+  git clone https://github.com/trailheadapps-jp/lwc-recipes-jp
+   cd lwc-recipes-jp
   ```
 
-4. Create a scratch org and provide it with an alias (**lwc-recipes** in the command below):
+4. スクラッチ組織を生成し、エイリアスを設定します (**lwc-recipes-jp** を以下のコマンドラインでは使用):
 
   ```
-  sfdx force:org:create -s -f config/project-scratch-def.json -a lwc-recipes
+  sfdx force:org:create -s -f config/project-scratch-def.json -a lwc-recipes-jp
   ```
 
-5. Push the app to your scratch org:
+5. アプリをスクラッチ組織にPushします:
 
   ```
   sfdx force:source:push
   ```
 
-6. Assign the **recipes** permission set to the default user:
+6. **recipes** 権限セットをデフォルトユーザにアサインします:
 
   ```
   sfdx force:user:permset:assign -n recipes
   ```
 
-7. Load sample data:
+7. サンプルデータをロードします:
 
   ```
   sfdx force:data:tree:import --plan ./data/data-plan.json
   ```
 
-8. Open the scratch org:
+8. スクラッチ組織を開きます:
 
   ```
   sfdx force:org:open
   ```
 
-9. In **Setup**, under **Themes and Branding**, activate the **Recipes Lite** or **Recipes Blue** theme.
+9. **設定** ページから, **テーマおよびブランド設定** で **Recipes Lite** もしくは **Recipes Blue** テーマを有効にします。
 
-10. In App Launcher, select the **LWC** app.
+10. アプリケーションランチャーより、 **LWC** アプリを選択します。
 
-## Installing Recipes using an Unlocked Package
+## ロック解除済みパッケージを使ったレシピのインストール
 
-1. [Sign up](https://www.salesforce.com/form/signup/prerelease-spring19/) for a Spring '19 pre-release org, enable My Domain, and deploy it to all users.
+1. [サインアップ](https://www.salesforce.com/form/signup/prerelease-spring19/) ページでSpring '19プレリリース組織を取得して私のドメインを有効化し、すべてのユーザに展開します。
 
-2. Click [this link](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB0000000YGYOIA4) to install the Recipes unlocked package in your Spring '19 org.
+2. [このリンク](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB0000000YGYOIA4) をクリックし、レシピのロック解除済みパッケージをSpring '19組織にインストールします。
 
-3. Select **Install for All Users**
+3. **すべてのユーザのインストール** を選択します。
 
-4. Import Account and Contacts data:
+4. 取引先及び取引先責任者のデータをインポートします:
 
-  - Click [here](https://raw.githubusercontent.com/trailheadapps/lwc-recipes/master/data/Accounts-Contacts.csv) to acccess the **Accounts-Contacts.csv** file. Right click in the browser window and save the file as **Accounts-Contacts.csv**.
-  - In **Setup**, type **Data Import** in the Quick Find box and click **Data Import Wizard**.
-  - Click **Launch Wizard**.
-  - Click **Accounts and Contacts**, and click **Add New Records**.
-  - Drag the **Accounts-Contacts.csv** file you just saved to the upload area.
-  - Click **Next**, **Next**, and **Start Import**.
+  - [こちら](https://raw.githubusercontent.com/trailheadapps-jp/lwc-recipes-jp/master/data/Accounts-Contacts.csv) をクリックし**Accounts-Contacts.csv** ファイルにアクセスします。ブラウザウィンドウで右クリックし、ファイルを **Accounts-Contacts.csv** として保存します。
+  - **設定** ページより**データインポート** とクイック検索に入力し、**データインポートウィザード** をクリックします。
+  - **ウィザードを起動** をクリックします
+  - **取引先 & 取引先責任者**を選択し、**新規レコードの追加**をクリックします。
+  - 保存した**Accounts-Contacts.csv** ファイルをアップロードエリアにドラッグします。
+  - **次へ**, **次へ**とクリックし、**インポート開始** をクリックします。
 
-5. In **Setup**, under **Themes and Branding**, activate the **Recipes Lite** or **Recipes Blue** theme.
+5. **設定** ページから, **テーマおよびブランド設定** で **Recipes Lite** もしくは **Recipes Blue** テーマを有効にします。
 
-6. In App Launcher, select the **LWC** app.
+6. アプリケーションランチャーより、 **LWC** アプリを選択します。
 
+
+<!-- 
 ## Optional Installation Instructions
 
 This repository contains several files that are relevant if you want to integrate modern web development tooling to your Salesforce development processes, or to your continuous integration/continuous deployment processes.
