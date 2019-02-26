@@ -1,10 +1,11 @@
 <template>
-
     <lightning-card title="PubsubContactList" icon-name="custom:custom30">
-
         <div class="slds-m-around_medium" oncontactselect={handleContactSelect}>
             <template for:each={contacts.data} for:item="contact">
-                <c-contact-list-item-bubbling key={contact.Id} contact={contact}></c-contact-list-item-bubbling>
+                <c-contact-list-item-bubbling
+                    key={contact.Id}
+                    contact={contact}
+                ></c-contact-list-item-bubbling>
             </template>
         </div>
 
@@ -13,7 +14,5 @@
             このコンポーネントは<strong>searchKeyChange</strong> イベントを購読します。このレシピを試すには検索バーに文字を入力してみて下さい。
             またこのコンポーネントはリスト上の取引先責任者がクリックされた際に <strong>contactSelected</strong> イベントを配信します。
         </c-view-source>
-
     </lightning-card>
-
 </template>

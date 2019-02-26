@@ -29,8 +29,8 @@ export default class ApiSetterGetter extends LightningElement {
             {
                 id: this.lastTodoId,
                 description: this.description,
-                priority: this.priority,
-            },
+                priority: this.priority
+            }
         ];
     }
 }

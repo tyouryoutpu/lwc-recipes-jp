@@ -1,16 +1,17 @@
 <template>
-
     <lightning-card title="PubsubSearchBar" icon-name="custom:custom30">
-
         <div class="slds-m-around_medium">
-            <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search"></lightning-input>
+            <lightning-input
+                type="search"
+                onchange={handleKeyChange}
+                class="slds-m-bottom_small"
+                label="Search"
+            ></lightning-input>
         </div>
 
         <c-view-source source="lwc/pubsubSearchBar" slot="footer">
             パブリッシャとサブスクライバが同一のDOMブランチに存在しなくても、すべてのコンポーネントが購読できるイベントを配信します。<span class="alert">このアプローチはアプリケーションビルダー内のコミュケーションのみ利用して下さい。</span>&nbsp;
             このコンポーネントは <strong>searchKeyChange</strong> イベントを検索キーワードが変更されるたびに毎回配信します。このレシピを試すには検索バーに文字を入力してみて下さい。
         </c-view-source>
-
     </lightning-card>
-
 </template>

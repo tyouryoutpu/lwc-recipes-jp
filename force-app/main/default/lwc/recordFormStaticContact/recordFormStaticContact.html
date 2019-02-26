@@ -1,15 +1,18 @@
 <template>
-
-    <lightning-card title="RecordFormStaticContact" icon-name="standard:contact">
-
+    <lightning-card
+        title="RecordFormStaticContact"
+        icon-name="standard:contact"
+    >
         <div class="slds-m-around_medium">
-            <lightning-record-form object-api-name={objectApiName} record-id={recordId} fields={fields}></lightning-record-form>
+            <lightning-record-form
+                object-api-name={objectApiName}
+                record-id={recordId}
+                fields={fields}
+            ></lightning-record-form>
         </div>
 
         <c-view-source source="lwc/recordFormStaticContact" slot="footer">
             特定のレコードに対する編集可能なフォームを生成します。このレシピでは動的スキーマ定義(項目は文字列で定義される)を利用しています。
         </c-view-source>
-
     </lightning-card>
-
 </template>

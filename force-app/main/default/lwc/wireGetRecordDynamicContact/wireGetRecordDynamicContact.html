@@ -1,12 +1,22 @@
 <template>
-
-    <lightning-card title="WireGetRecordDynamicContact" icon-name="standard:contact">
+    <lightning-card
+        title="WireGetRecordDynamicContact"
+        icon-name="standard:contact"
+    >
         <template if:true={contact.data}>
             <div class="slds-m-around_medium">
                 <p>{name}</p>
                 <p>{title}</p>
-                <p><lightning-formatted-phone value={phone}></lightning-formatted-phone></p>
-                <p><lightning-formatted-email value={email}></lightning-formatted-email></p>
+                <p>
+                    <lightning-formatted-phone
+                        value={phone}
+                    ></lightning-formatted-phone>
+                </p>
+                <p>
+                    <lightning-formatted-email
+                        value={email}
+                    ></lightning-formatted-email>
+                </p>
             </div>
         </template>
         <template if:true={contact.error}>
@@ -15,7 +25,5 @@
         <c-view-source source="lwc/wireGetRecordDynamicContact" slot="footer">
             特定のレコードに対するアドホックなUIを生成します。このレシピでは動的スキーマ定義(項目は文字列で定義される)を利用しています。
         </c-view-source>
-
     </lightning-card>
-
 </template>

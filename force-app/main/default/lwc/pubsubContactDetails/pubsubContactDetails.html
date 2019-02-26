@@ -1,22 +1,26 @@
 <template>
-
     <lightning-card title="PubsubContactDetails" icon-name="custom:custom30">
-
         <div class="slds-m-around_medium">
             <template if:true={picture}>
-                <img src={picture} alt="Profile photo">
+                <img src={picture} alt="Profile photo" />
             </template>
             <p>{name}</p>
             <p>{title}</p>
-            <p><lightning-formatted-phone value={phone}></lightning-formatted-phone></p>
-            <p><lightning-formatted-email value={email}></lightning-formatted-email></p>
+            <p>
+                <lightning-formatted-phone
+                    value={phone}
+                ></lightning-formatted-phone>
+            </p>
+            <p>
+                <lightning-formatted-email
+                    value={email}
+                ></lightning-formatted-email>
+            </p>
         </div>
 
         <c-view-source source="lwc/pubsubContactDetails" slot="footer">
             pubsubユーティリティを使って別のコンポーネントが配信したイベントを購読します。<span class="alert">このアプローチはアプリケーションビルダー内のコミュケーションのみ利用して下さい。</span>&nbsp;
             このコンポーネントは <strong>contactSelected</strong> イベントを購読します。このレシピを試すには取引先責任者のリストを選択してみて下さい。
         </c-view-source>
-
     </lightning-card>
-
 </template>

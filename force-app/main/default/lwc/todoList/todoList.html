@@ -1,7 +1,10 @@
 <template>
-
     <div>
-        <lightning-input label="重要のみ" type="checkbox" onchange={handleCheckboxChange}></lightning-input>
+        <lightning-input
+            label="重要のみ"
+            type="checkbox"
+            onchange={handleCheckboxChange}
+        ></lightning-input>
         <ul class="slds-m-top_x-small">
             <template for:each={filteredTodos} for:item="todo">
                 <li key={todo.id}>
@@ -9,9 +12,8 @@
                         <p>{todo.description}</p>
                         <p>重要: {todo.priority}</p>
                     </div>
-                </li>    
+                </li>
             </template>
         </ul>
     </div>
-
 </template>

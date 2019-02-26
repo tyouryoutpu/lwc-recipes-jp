@@ -1,22 +1,33 @@
 <template>
-
-    <lightning-card title="RecordViewFormDynamicContact" icon-name="standard:contact">
-
+    <lightning-card
+        title="RecordViewFormDynamicContact"
+        icon-name="standard:contact"
+    >
         <div class="slds-m-around_medium">
             <lightning-record-view-form
                 object-api-name={objectApiName}
-                record-id={recordId}>
-                <lightning-output-field field-name='Name'></lightning-output-field>
-                <lightning-output-field field-name='Title'></lightning-output-field>
-                <lightning-output-field field-name='Phone'></lightning-output-field>
-                <lightning-output-field field-name='Email'></lightning-output-field>
+                record-id={recordId}
+            >
+                <lightning-output-field
+                    field-name="AccountId"
+                ></lightning-output-field>
+                <lightning-output-field
+                    field-name="Name"
+                ></lightning-output-field>
+                <lightning-output-field
+                    field-name="Title"
+                ></lightning-output-field>
+                <lightning-output-field
+                    field-name="Phone"
+                ></lightning-output-field>
+                <lightning-output-field
+                    field-name="Email"
+                ></lightning-output-field>
             </lightning-record-view-form>
         </div>
 
         <c-view-source source="lwc/recordViewFormDynamicContact" slot="footer">
             特定のレコードに対する読み取り専用フォームを生成します。このレシピでは動的スキーマ定義(項目は文字列で定義される)を利用しています。
         </c-view-source>
-
     </lightning-card>
-
 </template>

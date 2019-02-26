@@ -1,10 +1,11 @@
 <template>
-
     <lightning-card title="ApexImperativeMethod" icon-name="custom:custom63">
-
         <div class="slds-m-around_medium">
             <p class="slds-m-bottom_small">
-                <lightning-button label="取引先責任者の読み込み" onclick={handleLoad}></lightning-button>
+                <lightning-button 
+                    label="取引先責任者の読み込み" 
+                    onclick={handleLoad}>
+                </lightning-button>
             </p>
             <template if:true={contacts}>
                 <template for:each={contacts} for:item="contact">
@@ -13,13 +14,11 @@
             </template>
             <template if:true={error}>
                 <c-error-panel errors={error}></c-error-panel>
-            </template>    
+            </template>
         </div>
 
         <c-view-source source="lwc/apexImperativeMethod" slot="footer">
             Apex methodの呼び出し命令によってレコードのリストを取得します。
         </c-view-source>
-
     </lightning-card>
-
 </template>

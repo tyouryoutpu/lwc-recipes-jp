@@ -1,7 +1,8 @@
 <template>
-
-    <lightning-card title="ApexWireMethodToProperty" icon-name="custom:custom63">
-
+    <lightning-card
+        title="ApexWireMethodToProperty"
+        icon-name="custom:custom63"
+    >
         <div class="slds-m-around_medium">
             <template if:true={contacts.data}>
                 <template for:each={contacts.data} for:item="contact">
@@ -10,13 +11,11 @@
             </template>
             <template if:true={contacts.error}>
                 <c-error-panel errors={contacts.error}></c-error-panel>
-            </template>                
+            </template>
         </div>
 
         <c-view-source source="lwc/apexWireMethodToProperty" slot="footer">
             @wireでレコードのリストを取得するApexメソッドを呼び出します。このレシピではApex methodをコンポーネントのプロパティへワイヤリングしています。
         </c-view-source>
-
     </lightning-card>
-
 </template>

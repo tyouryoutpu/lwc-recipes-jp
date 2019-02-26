@@ -1,17 +1,16 @@
 <template>
-
     <lightning-card title="CompositionIteration" icon-name="custom:custom57">
-
         <div class="slds-m-around_medium">
             <template for:each={contacts} for:item="contact">
-                <c-contact-tile key={contact.Id} contact={contact}></c-contact-tile>
+                <c-contact-tile
+                    key={contact.Id}
+                    contact={contact}
+                ></c-contact-tile>
             </template>
         </div>
 
         <c-view-source source="lwc/compositionIteration" slot="footer">
             テンプレート内でアイテム配列をループし、配列のアイテム毎にネストされた子コンポーネントをインスタンス化します。
         </c-view-source>
-
     </lightning-card>
-
 </template>

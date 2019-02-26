@@ -1,16 +1,16 @@
 <template>
-
     <lightning-card title="HelloBinding" icon-name="custom:custom14">
-
         <div class="slds-m-around_medium">
             <p>Hello, {greeting}!</p>
-            <lightning-input label="お名前" value={greeting} onchange={handleChange}></lightning-input>
+            <lightning-input
+                label="お名前"
+                value={greeting}
+                onchange={handleChange}
+            ></lightning-input>
         </div>
 
         <c-view-source source="lwc/helloBinding" slot="footer">
             入力項目の値が変更された際にプロパティの値に反映します。レシピを試すには項目に何か入力してみて下さい。
         </c-view-source>
-
     </lightning-card>
-
 </template>
