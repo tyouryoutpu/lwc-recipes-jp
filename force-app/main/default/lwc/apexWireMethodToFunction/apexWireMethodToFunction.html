@@ -1,7 +1,8 @@
 <template>
-
-    <lightning-card title="ApexWireMethodToFunction" icon-name="custom:custom63">
-
+    <lightning-card
+        title="ApexWireMethodToFunction"
+        icon-name="custom:custom63"
+    >
         <div class="slds-m-around_medium">
             <template if:true={contacts}>
                 <template for:each={contacts} for:item="contact">
@@ -10,13 +11,11 @@
             </template>
             <template if:true={error}>
                 <c-error-panel errors={error}></c-error-panel>
-            </template>    
+            </template>
         </div>
 
         <c-view-source source="lwc/apexWireMethodToFunction" slot="footer">
             @wireでレコードのリストを取得するApexメソッドを呼び出します。このレシピではApex methodをコンポーネントの関数へワイヤリングしています。
         </c-view-source>
-
     </lightning-card>
-
 </template>

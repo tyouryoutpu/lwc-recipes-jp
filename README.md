@@ -19,26 +19,24 @@ Lightning Web Components レシピには2種類のインストール方法があ
 
 ## Salesforce DXを使ったレシピのインストール
 
-> **重要**: 現在はプレリリースのため、以下の様なフォルダ名をがプロジェクトのパスに含まれていないことを確認して下さい: **lwc**, **aura**, **wave**。例えば、このリポジトリを **/Projects/lwc** の様な名称のフォルダにcloneしないで下さい。
-
 1. 環境をセットアップします。 [Quick Start: Lightning Web Components](https://trailhead.salesforce.com/content/learn/projects/quick-start-lightning-web-components/) Trailhead プロジェクトのステップに従います。このステップには以下が含まれます:
 
-  - Spring '19 プレリリースにサインアップし、Dev Hubを有効化する
-  - プレリリースバージョンの Salesforce CLI のインストール
+  - Trailhead Playgroundで、Dev Hubを有効化する
+  - Salesforce CLI のインストール
   - Visual Studio Codeのインストール
-  - ightning Web Components extensionを含む、Visual Studio Code Salesforce extensionsのインストール
+  - Lightning Web Components extensionを含む、Visual Studio Code Salesforce extensionsのインストール
 
-2. まだ実施していない場合にはSpring '19 Hub組織に認証し、エイリアスを設定します(spring19hub):
+2. まだ実施していない場合にはHub組織に認証しエイリアスを設定します(以下のコマンドでは **myhuborg** と設定):
 
   ```
-  sfdx force:auth:web:login -d -a spring19hub
+  sfdx force:auth:web:login -d -a myhuborg
   ```
 
 3. lwc-recipes-jp リポジトリをCloneします:
 
   ```
   git clone https://github.com/trailheadapps-jp/lwc-recipes-jp
-   cd lwc-recipes-jp
+  cd lwc-recipes-jp
   ```
 
 4. スクラッチ組織を生成し、エイリアスを設定します (**lwc-recipes-jp** を以下のコマンドラインでは使用):
@@ -77,13 +75,15 @@ Lightning Web Components レシピには2種類のインストール方法があ
 
 ## ロック解除済みパッケージを使ったレシピのインストール
 
-1. [サインアップ](https://www.salesforce.com/form/signup/prerelease-spring19/) ページでSpring '19プレリリース組織を取得して私のドメインを有効化し、すべてのユーザに展開します。
+1. [サインアップ](https://developer.salesforce.com/signup) からDeveloper Edition組織を取得します。
 
-2. [このリンク](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB0000000YGYOIA4) をクリックし、レシピのロック解除済みパッケージをSpring '19組織にインストールします。
+2. 私のドメインをDEで有効化にします。この手順はの詳細は[こちら](https://trailhead.salesforce.com/modules/identity_login/units/identity_login_my_domain)にあります。
 
-3. **すべてのユーザのインストール** を選択します。
+3. [このリンク](https://login.salesforce.com/packaging/installPackage.apexp?p0=04tB0000000KAfTIAW) をクリックし、レシピのロック解除済みパッケージをDE組織にインストールします。
 
-4. 取引先及び取引先責任者のデータをインポートします:
+4. **すべてのユーザのインストール** を選択します。
+
+5. 取引先及び取引先責任者のデータをインポートします:
 
   - [こちら](https://raw.githubusercontent.com/trailheadapps-jp/lwc-recipes-jp/master/data/Accounts-Contacts.csv) をクリックし**Accounts-Contacts.csv** ファイルにアクセスします。ブラウザウィンドウで右クリックし、ファイルを **Accounts-Contacts.csv** として保存します。
   - **設定** ページより**データインポート** とクイック検索に入力し、**データインポートウィザード** をクリックします。
@@ -92,9 +92,9 @@ Lightning Web Components レシピには2種類のインストール方法があ
   - 保存した**Accounts-Contacts.csv** ファイルをアップロードエリアにドラッグします。
   - **次へ**, **次へ**とクリックし、**インポート開始** をクリックします。
 
-5. **設定** ページから, **テーマおよびブランド設定** で **Recipes Lite** もしくは **Recipes Blue** テーマを有効にします。
+6. **設定** ページから, **テーマおよびブランド設定** で **Recipes Lite** もしくは **Recipes Blue** テーマを有効にします。
 
-6. アプリケーションランチャーより、 **LWC** アプリを選択します。
+7. アプリケーションランチャーより、 **LWC** アプリを選択します。
 
 
 
@@ -112,14 +112,14 @@ Lightning Web Components レシピには2種類のインストール方法があ
 
 ### Pre-commit hook
 
-このリポジトリには <package.json> ファイルも付属しています。`git commit` で変更をするたびにPrettierとESLintを実行してコードのフォーマットとlintingを強制するpre-commitフックを簡単に設定できます。
+このリポジトリには [package.json](./package.json) ファイルも付属しています。`git commit` で変更をするたびにPrettierとESLintを実行してコードのフォーマットとlintingを強制するpre-commitフックを簡単に設定できます。
 
 フォーマットとlintingのpre-commit hook 設定するには:
 
 1. [Node.js](https://nodejs.org) がインストールされていない場合はインストールします
 2. `npm install` をプロジェクトルートフォルダで実行し、ESLint及びPrettierモジュールをインストールします (メモ: MacユーザはXcode command line toolsがインストールされていることをこのコマンドの実行前に確認してください。)
 
-Prettier 及び ESLint はcommit変更のたびに毎回自動的に実行されます。コミットはlintingエラーを検出した場合には失敗します。またフォーマット及びlintingをコマンドラインから以下のコマンドによって実行することも可能です( <package.json> で完全なリストを確認してください):
+Prettier 及び ESLint はcommit変更のたびに毎回自動的に実行されます。コミットはlintingエラーを検出した場合には失敗します。またフォーマット及びlintingをコマンドラインから以下のコマンドによって実行することも可能です( [package.json](./package.json) で完全なリストを確認してください):
 
 ```
 npm run lint:lwc

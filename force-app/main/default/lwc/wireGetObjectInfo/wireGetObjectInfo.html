@@ -1,11 +1,17 @@
 <template>
-
     <lightning-card title="WireGetObjectInfo" icon-name="custom:custom67">
-
         <div class="slds-m-horizontal_medium">
-            <lightning-input value={objectApiNameInputValue} placeholder="Enter object API name" onchange={objectNameChange} label="Search"></lightning-input>
+            <lightning-input
+                value={objectApiNameInputValue}
+                placeholder="Enter object API name"
+                onchange={objectNameChange}
+                label="Search"
+            ></lightning-input>
             <p class="slds-p-vertical_small">
-                <lightning-button label="Get Object Info" onclick={handleBtnClick}></lightning-button>
+                <lightning-button
+                    label="Get Object Info"
+                    onclick={handleBtnClick}
+                ></lightning-button>
             </p>
             <template if:true={objectInfo.data}>
                 <div class="scroller">
@@ -15,11 +21,9 @@
         </div>
         <template if:true={objectInfo.error}>
             <c-error-panel errors={objectInfo.error}></c-error-panel>
-        </template>    
+        </template>
         <c-view-source source="lwc/wireGetObjectInfo" slot="footer">
             特定のオブジェクトのメタデータを取得します。メタデータには項目、子関連、レコードタイプ、テーマが含まれます。このレシピを試すにはオブジェクト名を入力し、"オブジェクト情報を取得"をクリックします。
         </c-view-source>
-
     </lightning-card>
-
 </template>

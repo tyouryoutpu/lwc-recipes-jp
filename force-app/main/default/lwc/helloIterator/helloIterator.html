@@ -1,7 +1,5 @@
 <template>
-
     <lightning-card title="HelloIterator" icon-name="custom:custom14">
-
         <ul class="slds-m-around_medium">
             <template iterator:it={contacts}>
                 <li key={it.value.Id}>
@@ -15,7 +13,5 @@
         <c-view-source source="lwc/helloIterator" slot="footer">
             配列のループに加え、最初と最後に特定の処理を行います。
         </c-view-source>
-
     </lightning-card>
-
 </template>

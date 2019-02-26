@@ -1,19 +1,24 @@
 <template>
-
     <lightning-card title="Lightning Data Service" icon-name="custom:custom42">
         <template if:true={contact.data}>
             <div class="slds-m-around_medium content">
                 Lightning Data Service コンポーネントの挙動はレコードページが最も分かりやすく確認できます。
                 <p class="slds-m-around_medium">
-                    <lightning-button label="ページを開く!" onclick={navigateToContact}></lightning-button>
+                    <lightning-button
+                        label="ページを開く!"
+                        onclick={navigateToContact}
+                    ></lightning-button>
                 </p>
-                <p>Lightning Data Serviceコンポーネントは右側のサイドバーにあります。</p>
-                <p>(<strong>取引先責任者</strong>タブで取引先責任者を選択することもできます)</p>
+                <p>
+                    Lightning Data Serviceコンポーネントは右側のサイドバーにあります。
+                </p>
+                <p>
+                    (<strong>取引先責任者</strong>タブで取引先責任者を選択することもできます)
+                </p>
             </div>
         </template>
         <template if:true={contact.error}>
             <c-error-panel errors={contact.error}></c-error-panel>
         </template>
     </lightning-card>
-
 </template>

@@ -1,17 +1,31 @@
 <template>
-
-    <lightning-card title="ApiSetterGetter" icon-name="standard:product_consumed">
+    <lightning-card
+        title="ApiSetterGetter"
+        icon-name="standard:product_consumed"
+    >
         <div class="slds-m-around_medium">
-            <lightning-input label="概要" onchange={handleDescriptionChange} value={description}></lightning-input>
-            <lightning-input label="重要" type="checkbox" onchange={handlePriorityChange} checked={priority}></lightning-input>
-            <lightning-button label="Todoの追加" variant="brand" onclick={handleSave} class="slds-p-vertical_small"></lightning-button>
+            <lightning-input
+                label="概要"
+                onchange={handleDescriptionChange}
+                value={description}
+            ></lightning-input>
+            <lightning-input
+                label="重要"
+                type="checkbox"
+                onchange={handlePriorityChange}
+                checked={priority}
+            ></lightning-input>
+            <lightning-button
+                label="Todoの追加"
+                variant="brand"
+                onclick={handleSave}
+                class="slds-p-vertical_small"
+            ></lightning-button>
             <c-todo-list todos={todos}></c-todo-list>
         </div>
 
         <c-view-source source="lwc/apiSetterGetter" slot="footer">
             親から子へのコミュニケーションで、setter 及び getterが実装済みのpublicプロパティ(@api)を使用して子コンポーネントへデータを渡し、プロパティが設定されたタイミングでロジックを実行します。
         </c-view-source>
-
     </lightning-card>
-
 </template>

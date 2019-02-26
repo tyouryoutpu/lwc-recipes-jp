@@ -1,12 +1,21 @@
 <template>
-
-    <lightning-card title="CompositionContactSearch" icon-name="custom:custom57">
-
+    <lightning-card
+        title="CompositionContactSearch"
+        icon-name="custom:custom57"
+    >
         <div class="slds-m-around_medium">
-            <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="検索"></lightning-input>
+            <lightning-input
+                type="search"
+                onchange={handleKeyChange}
+                class="slds-m-bottom_small"
+                label="検索"
+            ></lightning-input>
             <template if:true={contacts}>
                 <template for:each={contacts} for:item="contact">
-                    <c-contact-tile key={contact.Id} contact={contact}></c-contact-tile>
+                    <c-contact-tile
+                        key={contact.Id}
+                        contact={contact}
+                    ></c-contact-tile>
                 </template>
             </template>
         </div>
@@ -16,7 +25,5 @@
         <c-view-source source="lwc/compositionContactSearch" slot="footer">
             複数の子コンポーネントを組み立てた例です。このレシピを試すには検索バーに値を入力してみて下さい。
         </c-view-source>
-
     </lightning-card>
-
 </template>

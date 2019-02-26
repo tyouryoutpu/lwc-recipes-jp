@@ -1,13 +1,13 @@
 <template>
+    <lightning-card title="NavToFilesHome" icon-name="custom:custom96">
+        <lightning-button
+            label="ファイルホームへ行く"
+            class="slds-m-around_medium"
+            onclick={navigateToFilesHome}
+        ></lightning-button>
 
-        <lightning-card title="NavToFilesHome" icon-name="custom:custom96">
-
-                <lightning-button label="ファイルホームへ行く" class="slds-m-around_medium" onclick={navigateToFilesHome}></lightning-button>
-
-                <c-view-source source="lwc/navToFilesHome" slot="footer">
-                        標準ページへ遷移します。この例ではファイルホームページへ移動します。
-                </c-view-source>
-        
-        </lightning-card>
-
+        <c-view-source source="lwc/navToFilesHome" slot="footer">
+            標準ページへ遷移します。この例ではファイルホームページへ移動します。
+        </c-view-source>
+    </lightning-card>
 </template>

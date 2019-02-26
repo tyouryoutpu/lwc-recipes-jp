@@ -3,6 +3,7 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { refreshApex } from '@salesforce/apex';
 import { deleteRecord } from 'lightning/uiRecordApi';
 import getAccountList from '@salesforce/apex/AccountController.getAccountList';
+import { reduceErrors } from 'c/ldsUtils';
 
 export default class LdsDeleteRecord extends LightningElement {
     @track accounts;

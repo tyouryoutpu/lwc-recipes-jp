@@ -4,14 +4,18 @@
             <div class="slds-m-around_medium">
                 <p>{name}</p>
                 <p>{title}</p>
-                <p><lightning-formatted-email value={email}></lightning-formatted-email></p>
+                <p>
+                    <lightning-formatted-email
+                        value={email}
+                    ></lightning-formatted-email>
+                </p>
             </div>
         </template>
         <template if:true={contact.error}>
             <c-error-panel errors={contact.error}></c-error-panel>
         </template>
         <c-view-source source="lwc/apexStaticSchema" slot="footer">
-            Apex methodでschema定義に基づいたSObject値を取得します。
+            Apex methodで静的なSchema定義に基づいたSObject値を取得します。
         </c-view-source>
     </lightning-card>
 </template>

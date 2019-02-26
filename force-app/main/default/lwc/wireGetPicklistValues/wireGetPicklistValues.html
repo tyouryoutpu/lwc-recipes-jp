@@ -1,11 +1,14 @@
 <template>
-
     <lightning-card title="WireGetPicklistValues" icon-name="custom:custom67">
-
         <template if:true={picklistValues.data}>
             <div class="slds-m-around_medium">
                 <template for:each={picklistValues.data.values} for:item="item">
-                    <lightning-input key={item.value} label={item.label} data-value={item.value} type="checkbox"></lightning-input>
+                    <lightning-input
+                        key={item.value}
+                        label={item.label}
+                        data-value={item.value}
+                        type="checkbox"
+                    ></lightning-input>
                 </template>
             </div>
         </template>
@@ -16,7 +19,5 @@
         <c-view-source source="lwc/wireGetPicklistValues" slot="footer">
             特定の項目の選択リスト値を取得します。この例では <strong>取引</strong> オブジェクトの <strong>種別</strong> 項目を取得します。
         </c-view-source>
-
     </lightning-card>
-
 </template>

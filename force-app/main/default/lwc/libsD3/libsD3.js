@@ -19,7 +19,7 @@ export default class LibsD3 extends LightningElement {
 
         Promise.all([
             loadScript(this, D3 + '/d3.v5.min.js'),
-            loadStyle(this, D3 + '/style.css'),
+            loadStyle(this, D3 + '/style.css')
         ])
             .then(() => {
                 this.initializeD3();
@@ -29,15 +29,15 @@ export default class LibsD3 extends LightningElement {
                     new ShowToastEvent({
                         title: 'Error loading D3',
                         message: error.message,
-                        variant: 'error',
-                    }),
+                        variant: 'error'
+                    })
                 );
             });
     }
 
     initializeD3() {
         // Example adopted from https://bl.ocks.org/mbostock/2675ff61ea5e063ede2b5d63c08020c7
-        const svg = d3.select('svg.d3');
+        const svg = d3.select(this.template.querySelector('svg.d3'));
         const width = this.svgWidth;
         const height = this.svgHeight;
         const color = d3.scaleOrdinal(d3.schemeDark2);
@@ -48,7 +48,7 @@ export default class LibsD3 extends LightningElement {
                 'link',
                 d3.forceLink().id(d => {
                     return d.id;
-                }),
+                })
             )
             .force('charge', d3.forceManyBody())
             .force('center', d3.forceCenter(width / 2, height / 2));
@@ -80,7 +80,7 @@ export default class LibsD3 extends LightningElement {
                     .drag()
                     .on('start', dragstarted)
                     .on('drag', dragged)
-                    .on('end', dragended),
+                    .on('end', dragended)
             );
 
         node.append('title').text(d => {
