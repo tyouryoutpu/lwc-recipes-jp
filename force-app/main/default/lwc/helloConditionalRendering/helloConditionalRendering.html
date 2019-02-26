@@ -4,21 +4,21 @@
 
         <div class="slds-m-around_medium">
 
-            <lightning-input type="checkbox" label="Show details" onchange={handleChange}></lightning-input>
+            <lightning-input type="checkbox" label="詳細を表示" onchange={handleChange}></lightning-input>
 
             <div class="slds-m-vertical_medium">
                 <template if:true={areDetailsVisible}>
-                    These are the details!
+                    詳細を表示しています!
                 </template>
                 <template if:false={areDetailsVisible}>
-                    Not showing details.
+                    詳細は表示されていません。
                 </template>
             </div>
 
         </div>
 
         <c-view-source source="lwc/helloConditionalRendering" slot="footer">
-            Conditionally render elements.
+            elementsのレンダリングを条件指定しています。
         </c-view-source>
 
     </lightning-card>

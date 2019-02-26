@@ -2,12 +2,12 @@
 
     <lightning-card title="ApiFunction" icon-name="standard:product_consumed">
         <div class="slds-m-around_medium">
-            <lightning-button label="Refresh Time" onclick={handleRefresh}></lightning-button>
+            <lightning-button label="時間の更新" onclick={handleRefresh}></lightning-button>
             <c-clock></c-clock>
         </div>
 
         <c-view-source source="lwc/apiFunction" slot="footer">
-            Parent-to-child communication. Call a public (@api) function in a child component.
+            親から子へのコミュニケーションで、子コンポーネントのpublic関数(@api)を呼び出します。
         </c-view-source>
 
     </lightning-card>

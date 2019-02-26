@@ -6,15 +6,15 @@
                 <p>{contact.data.Name}</p>
                 <p>{contact.data.Title}</p>
                 <p class="slds-m-bottom_small"><lightning-formatted-email value={contact.data.Email}></lightning-formatted-email></p>
-                <lightning-button label="Go to Contact Record" onclick={navigateToContact} class="slds-m-right_x-small"></lightning-button>
-                <lightning-button label="Go to Edit Contact" onclick={navigateToEdit}></lightning-button>
+                <lightning-button label="取引先責任者レコードへ行く" onclick={navigateToContact} class="slds-m-right_x-small"></lightning-button>
+                <lightning-button label="取引先責任者の編集へ行く" onclick={navigateToEdit}></lightning-button>
             </div>
         </template>
         <template if:true={contact.error}>
             <c-error-panel errors={contact.error}></c-error-panel>
         </template>
         <c-view-source source="lwc/navToRecord" slot="footer">
-            Navigate to a record page. In this example, a contact.
+            レコードページへ遷移します。この例では取引先責任者へ移動します。
         </c-view-source>
 
     </lightning-card>

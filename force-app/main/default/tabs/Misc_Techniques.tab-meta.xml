@@ -2,7 +2,7 @@
 <CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
     <description>Created by Lightning App Builder</description>
     <flexiPage>Misc_Techniques</flexiPage>
-    <label>Misc</label>
+    <label>その他</label>
     <mobileReady>true</mobileReady>
     <motif>Custom19: Wrench</motif>
 </CustomTab>

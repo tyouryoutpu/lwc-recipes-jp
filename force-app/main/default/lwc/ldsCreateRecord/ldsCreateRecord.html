@@ -4,11 +4,11 @@
         <div class="slds-m-around_medium">
             <lightning-input label="Id" disabled value={accountId}></lightning-input>
             <lightning-input label="Name" onchange={handleNameChange} class="slds-m-bottom_x-small"></lightning-input>
-            <lightning-button label="Create Account" variant="brand" onclick={createAccount}></lightning-button>
+            <lightning-button label="取引先の作成" variant="brand" onclick={createAccount}></lightning-button>
         </div>
 
         <c-view-source source="lwc/ldsCreateRecord" slot="footer">
-            Create a record without writing server-side code. Always consider lightning-record-form and lightning-record-edit-form first. 
+            Server-Sideコードを掻かずにレコードを作成します。常にlightning-record-form 及び lightning-record-edit-form をまず検討して下さい。 
         </c-view-source>
 
     </lightning-card>

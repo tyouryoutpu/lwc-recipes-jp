@@ -29,8 +29,8 @@ export default class LdsDeleteRecord extends LightningElement {
             .then(() => {
                 this.dispatchEvent(
                     new ShowToastEvent({
-                        title: 'Success',
-                        message: 'Account deleted',
+                        title: '成功',
+                        message: '取引先を削除しました',
                         variant: 'success',
                     }),
                 );
@@ -39,7 +39,7 @@ export default class LdsDeleteRecord extends LightningElement {
             .catch(error => {
                 this.dispatchEvent(
                     new ShowToastEvent({
-                        title: 'Error deleting record',
+                        title: 'レコード削除エラー',
                         message: error.message,
                         variant: 'error',
                     }),

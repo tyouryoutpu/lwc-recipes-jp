@@ -2,7 +2,7 @@ import { LightningElement, track } from 'lwc';
 import { getTermOptions, calculateMonthlyPayment } from 'c/mortgage';
 
 export default class MiscSharedJavaScript extends LightningElement {
-    @track principal = 200000;
+    @track principal = 30000000;
     @track term = 30;
     @track rate = 4;
     @track monthlyPayment = '';

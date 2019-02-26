@@ -1,6 +1,7 @@
 # Lightning Web Components レシピ
-
+<!--
 [![CircleCI](https://circleci.com/gh/trailheadapps-jp/lwc-recipes-jp.svg?style=svg)](https://circleci.com/gh/trailheadapps-jp/lwc-recipes-jp)
+-->
 
 ## This is Localized Repository. Original is here.
 https://github.com/trailheadapps/lwc-recipes
@@ -96,29 +97,29 @@ Lightning Web Components レシピには2種類のインストール方法があ
 6. アプリケーションランチャーより、 **LWC** アプリを選択します。
 
 
-<!-- 
-## Optional Installation Instructions
 
-This repository contains several files that are relevant if you want to integrate modern web development tooling to your Salesforce development processes, or to your continuous integration/continuous deployment processes.
+## 追加のインストール手順
 
-### Code formatting
+このリポジトリではモダンなWeb開発のツールをSalesforce開発プロセスに統合したり、継続的インテグレーション/継続的デプロイメントのプロセスを実現するのに関連するいくつかのファイルが含まれています。
 
-[Prettier](https://prettier.io/) is a code formatter used to ensure consistent formatting across your code base. To use Prettier with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) from the Visual Studio Code Marketplace. The [.prettierignore](/.prettierignore) and [.prettierrc](/.prettierrc) files are provided as part of this repository to control the behavior of the Prettier formatter.
+### コードフォーマット
 
-### Code linting
+[Prettier](https://prettier.io/) はコードベースを一貫したフォーマットで保証するために使用されるコードフォーマッタです。PrettierをVisual Studio Codeと一緒に利用する場合、[こちらの機能拡張](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) をVisual Studio Code Marketplaceからインストールしてください。このリポジトリの一部として提供される [.prettierignore](/.prettierignore) 及び [.prettierrc](/.prettierrc) ファイルはPrettierフォーマッタの挙動をコントロールします。
 
-[ESLint](https://eslint.org/) is a popular JavaScript linting tool used to identify stylistic errors and erroneous constructs. To use ESLint with Visual Studio Code, install [this extension](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-lwc) from the Visual Studio Code Marketplace. The [.eslintignore](/.eslintignore) file is provided as part of this repository to exclude specific files from the linting process in the context of Lighning Web Components development.
+### コードのlinting
+
+[ESLint](https://eslint.org/) は構文エラーや誤った構成を見分けるためのポピュラーなJavaScript lintingツールです。ESLintをVisual Studio Codeと一緒に利用する場合、[こちらの機能拡張](https://marketplace.visualstudio.com/items?itemName=salesforce.salesforcedx-vscode-lwc) をVisual Studio Code Marketplaceからインストールしてください。このリポジトリの一部として提供される[.eslintignore](/.eslintignore) ファイルでLighning Web Components開発のコンテキストで特定のファイルをlintingプロセスから除外します。
 
 ### Pre-commit hook
 
-This repository also comes with a <package.json> file that makes it easy to set up a pre-commit hook that enforces code formatting and linting by running Prettier and ESLint every time you `git commit` changes.
+このリポジトリには <package.json> ファイルも付属しています。`git commit` で変更をするたびにPrettierとESLintを実行してコードのフォーマットとlintingを強制するpre-commitフックを簡単に設定できます。
 
-To set up the formatting and linting pre-commit hook:
+フォーマットとlintingのpre-commit hook 設定するには:
 
-1. Install [Node.js](https://nodejs.org) if you haven't already done so
-2. Run `npm install` in your project's root folder to install the ESLint and Prettier modules (Note: Mac users should verify that Xcode command line tools are installed before running this command.)
+1. [Node.js](https://nodejs.org) がインストールされていない場合はインストールします
+2. `npm install` をプロジェクトルートフォルダで実行し、ESLint及びPrettierモジュールをインストールします (メモ: MacユーザはXcode command line toolsがインストールされていることをこのコマンドの実行前に確認してください。)
 
-Prettier and ESLint will now run automatically every time you commit changes. The commit will fail if linting errors are detected. You can also run the formatting and linting from the command line using the following commands (check out <package.json> for the full list):
+Prettier 及び ESLint はcommit変更のたびに毎回自動的に実行されます。コミットはlintingエラーを検出した場合には失敗します。またフォーマット及びlintingをコマンドラインから以下のコマンドによって実行することも可能です( <package.json> で完全なリストを確認してください):
 
 ```
 npm run lint:lwc

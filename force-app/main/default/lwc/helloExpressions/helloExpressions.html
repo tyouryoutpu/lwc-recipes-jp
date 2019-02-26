@@ -2,13 +2,13 @@
 
     <lightning-card title="HelloExpressions" icon-name="custom:custom14">
         <div class="slds-m-around_medium">
-            <lightning-input name='firstName' label="First Name" onchange={handleChange}></lightning-input>
-            <lightning-input name='lastName' label="Last Name" onchange={handleChange}></lightning-input>
-            <p class="slds-m-top_medium">Uppercased Full Name: {uppercasedFullName}</p>
+            <lightning-input name='firstName' label="名(英語)" onchange={handleChange}></lightning-input>
+            <lightning-input name='lastName' label="姓(英語)" onchange={handleChange}></lightning-input>
+            <p class="slds-m-top_medium">大文字の名称: {uppercasedFullName}</p>
         </div>
 
         <c-view-source source="lwc/helloExpressions" slot="footer">
-            Use JavaScript expressions in a template. Type something in the input fields to see the recipe in action.
+            テンプレート内でJavaScriptを使用します。レシピを試すには項目に何か入力してみて下さい。
         </c-view-source>
 
     </lightning-card>

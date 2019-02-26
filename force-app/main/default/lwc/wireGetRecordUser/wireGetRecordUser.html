@@ -5,7 +5,7 @@
         <template if:true={user.data}>
             <div class="slds-m-around_medium">
                 <p>Id: {userId}</p>
-                <p>Name: {name}</p>
+                <p>名前: {name}</p>
                 <p><lightning-formatted-email value={email}></lightning-formatted-email></p>
             </div>
         </template>
@@ -13,7 +13,7 @@
             <c-error-panel errors={user.error}></c-error-panel>
         </template>
         <c-view-source source="lwc/wireGetRecordUser" slot="footer">
-            Get user information using @wire.
+            @wire を利用してユーザ情報を取得します
         </c-view-source>
 
     </lightning-card>

@@ -33,7 +33,7 @@ export default class LibsChartjs extends LightningElement {
                     label: 'Dataset 1',
                 },
             ],
-            labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue'],
+            labels: ['赤', 'オレンジ', '黄', '緑', '青'],
         },
         options: {
             responsive: true,

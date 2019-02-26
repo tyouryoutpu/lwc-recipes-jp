@@ -23,8 +23,8 @@ export default class LdsCreateRecord extends LightningElement {
                 this.accountId = account.id;
                 this.dispatchEvent(
                     new ShowToastEvent({
-                        title: 'Success',
-                        message: 'Account created',
+                        title: '成功',
+                        message: '取引先が作成されました',
                         variant: 'success',
                     }),
                 );
@@ -32,7 +32,7 @@ export default class LdsCreateRecord extends LightningElement {
             .catch(error => {
                 this.dispatchEvent(
                     new ShowToastEvent({
-                        title: 'Error creating record',
+                        title: 'レコード作成エラー',
                         message: error.message,
                         variant: 'error',
                     }),

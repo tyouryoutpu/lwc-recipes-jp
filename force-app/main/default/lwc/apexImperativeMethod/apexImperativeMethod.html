@@ -4,7 +4,7 @@
 
         <div class="slds-m-around_medium">
             <p class="slds-m-bottom_small">
-                <lightning-button label="Load Contacts" onclick={handleLoad}></lightning-button>
+                <lightning-button label="取引先責任者の読み込み" onclick={handleLoad}></lightning-button>
             </p>
             <template if:true={contacts}>
                 <template for:each={contacts} for:item="contact">
@@ -17,7 +17,7 @@
         </div>
 
         <c-view-source source="lwc/apexImperativeMethod" slot="footer">
-            Retrieve a list of records using an imperative Apex method call.
+            Apex methodの呼び出し命令によってレコードのリストを取得します。
         </c-view-source>
 
     </lightning-card>

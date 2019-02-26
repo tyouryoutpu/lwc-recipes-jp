@@ -1,6 +1,6 @@
 <aura:component implements="flexipage:availableForAllPageTypes">
 
-    <aura:attribute name="message" type="String" default="No selection"/>
+    <aura:attribute name="message" type="String" default="選択されていません"/>
 
     <lightning:card title="AuraDomEventListener" iconName="custom:custom30">
 
@@ -21,8 +21,8 @@
         </div>
 
         <div class="slds-card__footer">
-            Listen to a Lightning Web component event in a parent Aura component
-            <p><a class="slds-text-link" href="https://github.com/trailheadapps/lwc-recipes/tree/master/force-app/main/default/aura/auraDomEventListener" target="source">View Source</a></p>
+            Lightning Web component のイベントを親のAura componentでリッスンします。
+            <p><a class="slds-text-link" href="https://github.com/trailheadapps-jp/lwc-recipes-jp/tree/master/force-app/main/default/aura/auraDomEventListener" target="source">ソースコードを見る</a></p>
         </div>
     </lightning:card>
 

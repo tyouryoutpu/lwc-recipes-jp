@@ -3,12 +3,12 @@
     <lightning-card title="Lightning Data Service" icon-name="custom:custom42">
         <template if:true={contact.data}>
             <div class="slds-m-around_medium content">
-                The best place to see the Lightning Data Service components in action is on a record page.
+                Lightning Data Service コンポーネントの挙動はレコードページが最も分かりやすく確認できます。
                 <p class="slds-m-around_medium">
-                    <lightning-button label="Take me there!" onclick={navigateToContact}></lightning-button>
+                    <lightning-button label="ページを開く!" onclick={navigateToContact}></lightning-button>
                 </p>
-                <p>The Lightning Data Service components are in the right sidebar.</p>
-                <p>(You can also select a contact in the <strong>Contacts</strong> tab)</p>
+                <p>Lightning Data Serviceコンポーネントは右側のサイドバーにあります。</p>
+                <p>(<strong>取引先責任者</strong>タブで取引先責任者を選択することもできます)</p>
             </div>
         </template>
         <template if:true={contact.error}>
