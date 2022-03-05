@@ -1,0 +1,1 @@
+sfdx force:org:create -s -f config/project-scratch-def.json -a lwc-r22030501 --durationdays 30
