@@ -6,8 +6,11 @@ sfdx force:org:create -s -f config/project-scratch-def.json -a lwc-r22030501 --d
 https://data-nosoftware-2801-dev-ed.cs72.my.salesforce.com/
 test-usmivqt9loha@example.com
 
+
+
 sfdx force:source:push
 
-git push origin sandbox1
+git commit -m "add salesforce"  
 
+git push origin sandbox1
 
